@@ -25,7 +25,7 @@ function App() {
 
     const resetGame = () => {
         setBoard(Array(9).fill(null))
-        setTurn(turns.x)
+        setTurn(turns.X)
         setWinner(null)
 
         window.localStorage.removeItem('board')
@@ -45,7 +45,7 @@ function App() {
         setTurn(newTurn)
 
         window.localStorage.setItem('board', JSON.stringify(newBoard))
-        window.localStorage.setItem('turn',turn)
+        window.localStorage.setItem('turn',newTurn)
 
         const newWinner = checkWinner(newBoard)
         if (newWinner) {
